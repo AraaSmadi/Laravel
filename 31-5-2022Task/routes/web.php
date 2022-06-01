@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\students;
+use App\Http\Controllers\RegistrController;
+use App\Models\registr;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('registeration');
-});
+// Route::get('/about', [students::class ,'getall']);
+ Route::get('/register', [RegistrController::class ,'getall']);
+Route::get('/registerid', [RegistrController::class ,'getid']);
+// Route::get('/', function () {
+//     return view('aboutus');
+// });
+// Route::get('/', function () {
+//     return view('contactus');
+// });
