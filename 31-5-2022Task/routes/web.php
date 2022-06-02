@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\students;
+use App\Http\Controllers\students;
 use App\Http\Controllers\RegistrController;
 use App\Models\registr;
+use App\Http\Controllers\calController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +19,19 @@ use App\Models\registr;
 */
 
 // Route::get('/about', [students::class ,'getall']);
- Route::get('/register', [RegistrController::class ,'getall']);
-Route::get('/registerid', [RegistrController::class ,'getid']);
+//  Route::get('/register', [RegistrController::class ,'getall']);
+// Route::get('/registerid', [RegistrController::class ,'getid']);
 // Route::get('/', function () {
 //     return view('aboutus');
 // });
 // Route::get('/', function () {
 //     return view('contactus');
 // });
+
+
+// Route::get('/post', [test::class ,'getpost']);
+// Route::get('/post2', [test::class ,'post']);
+
+
+Route::get('/calculater', [calController::class ,'index']);
+
